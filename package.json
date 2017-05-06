@@ -1,0 +1,27 @@
+{
+  "name": "react-animated-hamburger-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mrbenhowl/react-animated-hamburger-example.git",
+  "author": "mrbenhowl@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.3.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0"
+  }
+}

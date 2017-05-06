@@ -1,0 +1,99 @@
+:root {
+  --burger-width: 40px;
+  --burger-height: 40px;
+  --bar-height: 4px;
+  --duration: 0.2s;
+  --dark-grey: #777777
+}
+
+.outerBurger {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  overflow: visible;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: 0 !important;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.line {
+  position: absolute;
+  display: block;
+  background-color: var(--dark-grey);
+  width: var(--burger-width);
+  height: var(--bar-height);
+  border-radius: 25%;
+}
+
+.collapsingLine {
+  composes: line;
+  transition: top var(--duration), bottom var(--duration), opacity var(--duration);
+}
+
+.transitionDelayForReturnToStart {
+  transition-delay: 0.4s;
+}
+
+.topLine_start {
+  composes: collapsingLine;
+  composes: transitionDelayForReturnToStart;
+  top: 0;
+  opacity: 1;
+}
+
+.topLine_end {
+  composes: collapsingLine;
+  top: calc(var(--burger-height) / 2);
+  opacity: 0;
+}
+
+.bottomLine_start {
+  composes: collapsingLine;
+  composes: transitionDelayForReturnToStart;
+  bottom: 0;
+  opacity: 1;
+}
+
+.bottomLine_end {
+  composes: collapsingLine;
+  bottom: calc(var(--burger-height) / 2);
+  opacity: 0;
+}
+
+.middleLine {
+  composes: line;
+  transition: transform var(--duration) var(--duration);
+  height: calc(var(--bar-height) - 1);
+  top: 47%;
+}
+
+.middleLine1_start {
+  composes: middleLine;
+  transform: rotate(0deg);
+}
+
+.middleLine1_end {
+  composes: middleLine;
+  transform: rotate(135deg);
+}
+
+.middleLine2_start {
+  composes: middleLine;
+  transform: rotate(0deg);
+}
+
+.middleLine2_end {
+  composes: middleLine;
+  transform: rotate(225deg);
+}
