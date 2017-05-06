@@ -7,3 +7,5 @@ To build locally:
 2. *yarn build* or *npm run build*
 3. fire up that browser and point to index.html
 4. The dist/ folder is committed so you can skip steps 1 and 2 and go straight to step 3 because there isn't any need to do steps 1 and 2 really (so that begs the question why did I include them, ah well). 
+
+Example - https://mrbenhowl.github.io/react-animated-hamburger-example/
